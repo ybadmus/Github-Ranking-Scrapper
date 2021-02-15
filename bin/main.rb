@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
 
 require_relative '../lib/logic'
+require_relative '../lib/scrapper'
 
 puts "\nWelcome, get the list of most active GitHub users in your country"
 puts "Disclaimer: All information are obtained from the official website for GitHub rankings - 'https://commits.top'"
