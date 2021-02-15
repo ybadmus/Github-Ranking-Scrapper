@@ -1,0 +1,17 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    nokogiri (1.11.1-x64-mingw32)
+      racc (~> 1.4)
+    paint (2.2.1)
+    racc (1.5.2)
+
+PLATFORMS
+  x64-mingw32
+
+DEPENDENCIES
+  nokogiri
+  paint
+
+BUNDLED WITH
+   2.2.9
