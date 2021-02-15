@@ -1,3 +1,5 @@
+require_relative '../lib/scrapper'
+
 class Logic
   attr_accessor :active_country
 
@@ -18,7 +20,8 @@ class Logic
   end
 
   def get_all_active_users
-    
+    scrapper = Scrapper.new(@active_country)
+    scrapper.get_all_active_users
   end
 
   def get_active_users_in_range(start_range, end_range)

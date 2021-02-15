@@ -1,7 +1,6 @@
 #!/usr/bin/env ruby
 
 require_relative '../lib/logic'
-require_relative '../lib/scrapper'
 
 puts "\nWelcome, get the list of most active GitHub users in your country"
 puts "Disclaimer: All information are obtained from the official website for GitHub rankings - 'https://commits.top'"
@@ -33,7 +32,7 @@ end
 
 case user_input_filter
   when 1
-    logic.get_all_active_users
+    puts logic.get_all_active_users
   when 2
     puts "\nEnter the starting value of the range"
     start_range = gets.chomp.to_i
