@@ -13,7 +13,7 @@ print logic.list_of_countries
 puts "\n\nSelect the country you want to view the list of most active GitHub users"
 
 user_input_country = gets.chomp.strip
-until logic.valid_country(user_input_country)
+while !logic.valid_country(user_input_country)
   puts 'Select a valid country name, please try again!'
   user_input_country = gets.chomp.strip
 end
@@ -25,7 +25,7 @@ puts "\n(1) All active users in #{user_input_country} \n(2) Active users in a ra
 puts "\nPlease select the filter you want to apply (1, 2 or 3)"
 
 user_input_filter = gets.chomp.strip.to_i
-until (1..3).include? user_input_filter
+while !(1..3).include? user_input_filter
   puts "\nSelect a valid filter (1, 2 or 3), please try again!"
   user_input_filter = gets.chomp.strip.to_i
 end
@@ -34,23 +34,23 @@ case user_input_filter
   when 1
     logic.get_all_active_users
   when 2
-    puts "Enter the starting value of the range"
-    start_range = gets.chomp.to_a
-    until start_range.to_a == 0
-      puts 'Select a valid start range, please try again!'
-      start_range = gets.chomp.to_a
+    puts "\nEnter the starting value of the range"
+    start_range = gets.chomp.to_i
+    while start_range == 0
+      puts "\nSelect a valid starting range, please try again!"
+      start_range = gets.chomp.to_i
     end
-    puts "Enter the ending value of the range"
-    end_range = gets.chomp
-    until start_range.to_a == 0
-      puts 'Select a valid end range, please try again!'
+    puts "\nEnter the ending value of the range"
+    end_range = gets.chomp.to_i
+    while start_range == 0
+      puts "\nSelect a valid ending range, please try again!"
       end_range = gets.chomp
     end
     logic.get_active_users_in_range(start_range, end_range)
   when 3
     logic.get_user_ranking(username)
   else
-    "You gave me #{user_input_filter} -- I have no idea what to do with that."
+    puts "\nYou gave me #{user_input_filter} -- I have no idea what to do with that."
 end
 
 
