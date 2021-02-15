@@ -15,4 +15,6 @@ class Logic
      COUNTRIES.one? { |country| country.upcase == user_input.upcase } 
   end
 
+  
+
 end
