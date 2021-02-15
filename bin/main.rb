@@ -18,6 +18,8 @@ until logic.valid_country(user_input_country)
   user_input_country = gets.chomp.strip
 end
 
+logic.active_country = user_input_country
+
 puts "To complete the search it\'s required to apply one of the filters below:"
 puts "\n(1) All active users in #{user_input_country} \n(2) Active users in a range eg: (10 - 20) \n(3) Active user's username eg: ybadmus"
 puts "\nPlease select the filter you want to apply (1, 2 or 3)"
@@ -30,11 +32,23 @@ end
 
 case user_input_filter
   when 1
-
+    logic.get_all_active_users
   when 2
-
+    puts "Enter the starting value of the range"
+    start_range = gets.chomp.to_a
+    until start_range.to_a == 0
+      puts 'Select a valid start range, please try again!'
+      start_range = gets.chomp.to_a
+    end
+    puts "Enter the ending value of the range"
+    end_range = gets.chomp
+    until start_range.to_a == 0
+      puts 'Select a valid end range, please try again!'
+      end_range = gets.chomp
+    end
+    logic.get_active_users_in_range(start_range, end_range)
   when 3
-    
+    logic.get_user_ranking(username)
   else
     "You gave me #{user_input_filter} -- I have no idea what to do with that."
 end
