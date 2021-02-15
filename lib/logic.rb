@@ -25,7 +25,9 @@ class Logic
   end
 
   def get_active_users_in_range(start_range, end_range)
-
+    scrapper = Scrapper.new(@active_country)
+    no_of_items = end_range - start_range 
+    scrapper.get_active_users_in_range(start_range, no_of_items)
   end
 
   def get_user_ranking(username)

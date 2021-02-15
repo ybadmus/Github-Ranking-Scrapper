@@ -32,21 +32,24 @@ end
 
 case user_input_filter
   when 1
-    puts logic.get_all_active_users
+    puts logic.get_all_active_users.slice(0, 10)
   when 2
     puts "\nEnter the starting value of the range"
+    puts "\nStarting value must not be greater than 256"
     start_range = gets.chomp.to_i
-    while start_range == 0
+    while start_range == 0 || start_range > 256 
       puts "\nSelect a valid starting range, please try again!"
       start_range = gets.chomp.to_i
     end
     puts "\nEnter the ending value of the range"
+    puts "\Ending value must not be greater than 256"
+    puts "\Starting value must not be greater than ending value"
     end_range = gets.chomp.to_i
-    while start_range == 0
+    while end_range == 0 || end_range > 256 || start_range > end_range
       puts "\nSelect a valid ending range, please try again!"
       end_range = gets.chomp
     end
-    logic.get_active_users_in_range(start_range, end_range)
+    puts logic.get_active_users_in_range(start_range, end_range)
   when 3
     logic.get_user_ranking(username)
   else

@@ -13,13 +13,21 @@ class Scrapper
   end
 
   def get_all_active_users
-    @parsed_doc.at_css('[class="users-list"]')
+    @parsed_doc.at_css('[class="users-list"]').css('tbody tr')
   end
 
   def get_organization_list
     @parsed_doc.at_css('[class="organizations-list"]')
   end
 
+  def get_active_users_in_range(start_range, length)
+    binding.pry
+    @parsed_doc.at_css('[class="users-list"]').css('tbody tr').slice(start_range, length)
+  end
+
+  def get_user_by_username
+    
+  end
 
 end
 
