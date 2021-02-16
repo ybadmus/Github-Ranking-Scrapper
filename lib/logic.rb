@@ -41,8 +41,13 @@ class Logic
   end
 
   private
-
-  
-
+  def display_response(rows)
+    response = []
+    rows.each do |tr|
+      row_values = tr.css('td').map { |item| item.content } 
+      response << row_values.to_a
+     end
+    response
+  end
 
 end
