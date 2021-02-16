@@ -1,5 +1,4 @@
 require_relative '../lib/logic'
-require_relative '../lib/scrapper'
 
 describe Logic do
 
