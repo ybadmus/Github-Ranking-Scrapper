@@ -41,6 +41,15 @@ class Logic
   end
 
   private
+  def find_username(rows, user)
+    response = rows.select do |tr|
+      row_values = tr.css('td[2]').text 
+      row_values.downcase.include? user.downcase
+     end
+    display_response(response)
+  end
+
+  private
   def display_response(rows)
     response = []
     rows.each do |tr|
@@ -48,15 +57,6 @@ class Logic
       response << row_values.to_a
      end
     response
-  end
-
-  private
-  def find_username(rows, user)
-    response = rows.select do |tr|
-      row_values = tr.css('td[2]').text 
-      row_values.downcase.include? user.downcase
-     end
-    display_response(response)
   end
 
 end
