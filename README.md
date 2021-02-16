@@ -11,7 +11,7 @@ A command line tool that displays the list of active github users in your countr
 
 To get a local copy up and running follow these simple steps.
 
-- Go to the main page of te repo. "git clone https://github.com/ybadmus/Github_Ranking_Scrapper.git"
+- Go to the main page of the repo. "git clone https://github.com/ybadmus/Github_Ranking_Scrapper.git"
 - Press the "Code" button and get the repo link.
 - Clone it using git.
 - Open terminal on that folder.
@@ -20,15 +20,15 @@ To get a local copy up and running follow these simple steps.
 ## Usage instructions
 
 - First run "bin/main.rb" in the terminal being in the root folder.
-- The program will welcome you and show you a list of countries from which you will be prompted to select from.
+- The program will welcome you and show a list of countries from which you will be prompted to select from.
 - Select the country you want to view the list of most active github users.
 - After selecting a country, you will be provided with the 4 options below to choose from. 
-- (1) All active users in the selected country, selecting this option will list all 256 active users.
-- (2) Active users in a range eg: (10 - 20), selecting this option will prompt you for a range. 
+- **(1) All active users in the selected country,** selecting this option will list all 256 active users.
+- **(2) Active users in a range eg: (10 - 20),** this option will prompt you for a range. 
     - Range must not be greater than 256, 
     - Beginning range must not be greater than the ending range.
-- (3) Search by active user's name. this will prompt for the user's names and list all the matching results.
-- (4) Active organizations, this option lists all the active company using github.
+- **(3) Search by active user's name,** selecting this will prompt for the user's names you are looking for and subsequently list all the matching results.
+- **(4) Active organizations,** this option lists all the active company using github in the country you selected.
 
 ## Prerequisites
 

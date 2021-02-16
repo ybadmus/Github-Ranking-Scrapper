@@ -1,4 +1,5 @@
 require_relative '../lib/scrapper'
+require 'pry'
 
 class Logic
   attr_accessor :active_country
@@ -58,6 +59,7 @@ class Logic
       row_values = tr.css('td').map(&:content)
       response << row_values.to_a
     end
+    #binding.pry
     response
   end
 end
