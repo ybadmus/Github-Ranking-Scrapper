@@ -3,15 +3,16 @@ GEM
   specs:
     nokogiri (1.11.1-x64-mingw32)
       racc (~> 1.4)
-    paint (2.2.1)
+    open-uri (0.1.0)
     racc (1.5.2)
 
 PLATFORMS
   x64-mingw32
 
 DEPENDENCIES
+  bundler
   nokogiri
-  paint
+  open-uri
 
 BUNDLED WITH
    2.2.9
