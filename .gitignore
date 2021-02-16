@@ -9,7 +9,6 @@
 /test/tmp/
 /test/version_tmp/
 /tmp/
-.rubocop.yml
 
 # Used by dotenv library to load environment variables.
 # .env
