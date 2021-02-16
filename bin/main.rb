@@ -1,5 +1,3 @@
-#!/usr/bin/env ruby
-
 require_relative '../lib/logic'
 
 puts "\nWelcome, get the list of most active github users in your country"

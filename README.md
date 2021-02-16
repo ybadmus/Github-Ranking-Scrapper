@@ -19,7 +19,7 @@ To get a local copy up and running follow these simple steps.
 
 ## Usage instructions
 
-- First run "bin/main.rb" in the terminal being in the root folder.
+- First run "./bin/main.rb" in the terminal being in the root folder.
 - The program will welcome you and show a list of countries from which you will be prompted to select from.
 - Select the country you want to view the list of most active github users.
 - After selecting a country, you will be provided with the 4 options below to choose from. 
