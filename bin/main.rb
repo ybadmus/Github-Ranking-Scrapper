@@ -64,6 +64,6 @@ case user_input_filter
     puts "\nYou gave me #{user_input_filter} -- I have no idea what to do with that."
 end
 
-
-
+puts "\nThank you - submit all suggestions https://github.com/ybadmus/github_ranking_scrapper/issues"
+puts ""
 
