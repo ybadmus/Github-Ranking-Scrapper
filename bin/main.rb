@@ -2,15 +2,15 @@
 
 require_relative '../lib/logic'
 
-puts "\nWelcome, get the list of most active GitHub users in your country"
-puts "Disclaimer: All information are obtained from the official website for GitHub rankings - 'https://commits.top'"
+puts "\nWelcome, get the list of most active github users in your country"
+puts "Disclaimer: All information are obtained from the official website for github rankings - 'https://commits.top'"
 puts "Enjoy!"
 puts ""
 
 logic = Logic.new
 puts "Countries"
 print logic.list_of_countries
-puts "\n\nSelect the country you want to view the list of most active GitHub users"
+puts "\n\nSelect the country you want to view the list of most active github users"
 
 user_input_country = gets.chomp.strip
 while !logic.valid_country(user_input_country)
@@ -21,18 +21,19 @@ end
 logic.active_country = user_input_country
 
 puts "To complete the search it\'s required to apply one of the filters below:"
-puts "\n(1) All active users in #{user_input_country} \n(2) Active users in a range eg: (10 - 20) \n(3) Active user's username eg: ybadmus"
-puts "\nPlease select the filter you want to apply (1, 2 or 3)"
+puts "\n(1) All active users in #{user_input_country} \n(2) Active users in a range eg: (10 - 20) \n(3) Search by active user's name \n(4) Active organizations"
+puts "\nPlease select the filter you want to apply (1, 2, or 4)"
 
 user_input_filter = gets.chomp.strip.to_i
-while !(1..3).include? user_input_filter
-  puts "\nSelect a valid filter (1, 2 or 3), please try again!"
+while !(1..4).include? user_input_filter
+  puts "\nSelect a valid filter (1, 2, 3 or 4), please try again!"
   user_input_filter = gets.chomp.strip.to_i
 end
 
 case user_input_filter
   when 1
-    puts logic.get_all_active_users.slice(0, 10)
+    puts "\nMost active GitHub users in #{user_input_country}"
+    puts logic.get_all_active_users
   when 2
     puts "\nEnter the starting value of the range"
     puts "\nStarting value must not be greater than 256"
@@ -51,12 +52,16 @@ case user_input_filter
     end
     puts logic.get_active_users_in_range(start_range, end_range)
   when 3
-    logic.get_user_ranking(username)
+    puts "\nEnter the username"
+    username = gets.chomp
+    puts logic.get_rank_by_username(username)
+  when 4
+    puts "\nMost active organizations #{user_input_country}"
+    puts logic.get_organizations_ranking
   else
     puts "\nYou gave me #{user_input_filter} -- I have no idea what to do with that."
 end
 
 
-puts "\nMost active GitHub users in #{user_input_country}"
 
 

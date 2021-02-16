@@ -21,17 +21,28 @@ class Logic
 
   def get_all_active_users
     scrapper = Scrapper.new(@active_country)
-    scrapper.get_all_active_users
+    display_response(scrapper.get_all_active_users)
   end
 
   def get_active_users_in_range(start_range, end_range)
     scrapper = Scrapper.new(@active_country)
     no_of_items = end_range - start_range 
-    scrapper.get_active_users_in_range(start_range, no_of_items)
+    display_response(scrapper.get_active_users_in_range(start_range - 1, no_of_items + 1))
   end
 
-  def get_user_ranking(username)
-
+  def get_rank_by_username(username)
+    scrapper = Scrapper.new(@active_country)
+    find_username(scrapper.get_all_active_users, username)
   end
+
+  def get_organizations_ranking
+    scrapper = Scrapper.new(@active_country)
+    display_response(scrapper.get_organizations_ranking)
+  end
+
+  private
+
+  
+
 
 end
