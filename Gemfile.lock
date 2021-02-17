@@ -1,0 +1,18 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    nokogiri (1.11.1-x64-mingw32)
+      racc (~> 1.4)
+    open-uri (0.1.0)
+    racc (1.5.2)
+
+PLATFORMS
+  x64-mingw32
+
+DEPENDENCIES
+  bundler
+  nokogiri
+  open-uri
+
+BUNDLED WITH
+   2.2.8
