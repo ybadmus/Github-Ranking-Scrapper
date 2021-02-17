@@ -1,11 +1,11 @@
 # Github_Ranking_Scrapper 
 A command line tool that displays the list of active github users in your country. We built this as the capstone project for Ruby, it's meant to practice several object oriented programming concepts to ensure mastery. 
 
-![screenshot](https://raw.githubusercontent.com/ybadmus/Github_Ranking_Scrapper/features/app_screenshot_1.PNG)
-![screenshot](https://raw.githubusercontent.com/ybadmus/Github_Ranking_Scrapper/features/app_screenshot_2.PNG)
-![screenshot](https://raw.githubusercontent.com/ybadmus/Github_Ranking_Scrapper/features/app_screenshot_3.PNG)
-![screenshot](https://raw.githubusercontent.com/ybadmus/Github_Ranking_Scrapper/features/app_screenshot_4.PNG)
-![screenshot](https://raw.githubusercontent.com/ybadmus/Github_Ranking_Scrapper/features/app_screenshot_5.PNG)
+![screenshot](https://raw.githubusercontent.com/ybadmus/Github_Ranking_Scrapper/features/images/app_screenshot_1.PNG)
+![screenshot](https://raw.githubusercontent.com/ybadmus/Github_Ranking_Scrapper/features/images/app_screenshot_2.PNG)
+![screenshot](https://raw.githubusercontent.com/ybadmus/Github_Ranking_Scrapper/features/images/app_screenshot_3.PNG)
+![screenshot](https://raw.githubusercontent.com/ybadmus/Github_Ranking_Scrapper/features/images/app_screenshot_4.PNG)
+![screenshot](https://raw.githubusercontent.com/ybadmus/Github_Ranking_Scrapper/features/images/app_screenshot_5.PNG)
 
 ## Getting Started
 
@@ -19,7 +19,7 @@ To get a local copy up and running follow these simple steps.
 
 ## Usage instructions
 
-- First run "./bin/main.rb" in the terminal being in the root folder.
+- First run "ruby ./bin/main.rb" in the terminal being in the root folder.
 - The program will welcome you and show a list of countries from which you will be prompted to select from.
 - Select the country you want to view the list of most active github users.
 - After selecting a country, you will be provided with the 4 options below to choose from. 
